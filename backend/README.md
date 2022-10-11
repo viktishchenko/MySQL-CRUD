@@ -12,3 +12,9 @@ npm i dotenv
 ## add client test
 
 ![CRUD add client test](readmeAssets/CRUD-add-client.png)
+
+```javascript
+npx create-react-app
+npm i react-router-dom
+
+```
