@@ -22,9 +22,9 @@ app.get("/", (req, res) => {
 
  //select db data
  /* 
- * if error
+ * if error / auth problem
  * Execute the following query in MYSQL Workbench or MiSQL Command Line Client
- * ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ * ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PASSWORD';
  * flush privileges;
   */
  app.get("/books", (req, res) => { 
@@ -34,6 +34,17 @@ app.get("/", (req, res) => {
         return res.json(data)
     })
   })
+
+  // Create any book
+app.post("/books", (req, res) => { 
+      const q = "INSERT INTO books (`title`, `description`, `cover`) VALUES(?)"
+      const values = ["title from backend", "description from backend", "cover pic from backend"]
+
+      db.query(q, [values], (err,data) => { 
+        if(err)return res.json(err)
+        return res.json("Book has been created successfully!")
+       })
+ })
 
 //anfn
 app.listen(8800, () => { 
