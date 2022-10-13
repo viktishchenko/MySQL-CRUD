@@ -1,5 +1,6 @@
 import express from 'express'
 import mysql from 'mysql'
+import cors from 'cors'
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -16,6 +17,7 @@ const db = mysql.createConnection({
 })
 
 app.use(express.json())
+app.use(cors())
 
 // check route (port 8800)
 app.get("/", (req, res) => { 
@@ -39,10 +41,11 @@ app.get("/", (req, res) => {
 
   // Create any book
 app.post("/books", (req, res) => { 
-      const q = "INSERT INTO books (`title`, `description`, `cover`) VALUES(?)"
+      const q = "INSERT INTO books (`title`, `description`, `price`, `cover`) VALUES(?)"
       const values = [
         req.body.title,
         req.body.description,
+        req.body.price,
         req.body.cover,
       ]
 
@@ -54,5 +57,5 @@ app.post("/books", (req, res) => {
 
 //anfn
 app.listen(8800, () => { 
-console.log("Connected to backend!")
+console.log("Connected to backend!!!")
  })

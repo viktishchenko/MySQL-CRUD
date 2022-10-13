@@ -23,3 +23,7 @@ npm i axios
 npm i cors
 
 ```
+
+## add clien-side post method
+
+![client post](readmeAssets/CRUD-react-add.png)
