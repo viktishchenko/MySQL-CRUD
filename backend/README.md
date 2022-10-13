@@ -15,6 +15,11 @@ npm i dotenv
 
 ```javascript
 npx create-react-app
+// add routes
 npm i react-router-dom
+// fetch data from backend
+npm i axios
+// fix CORS «Access-Control-Allow-Origin»)
+npm i cors
 
 ```
