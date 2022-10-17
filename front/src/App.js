@@ -3,6 +3,7 @@ import Add from './pages/Add';
 import Books from './pages/Books';
 import NotFound from './pages/NotFound';
 import Update from './pages/Update';
+import './style.css'
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
 <Routes>
   <Route path='/' element={<Books/>} />
   <Route path='/add' element={<Add/>} />
-  <Route path='/update' element={<Update/>} />
+  <Route path='/update/:id' element={<Update/>} />
   <Route path="*" element={<NotFound />} />
 </Routes>
 </BrowserRouter>

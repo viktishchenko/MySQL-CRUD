@@ -27,3 +27,9 @@ npm i cors
 ## add clien-side post method
 
 ![client post](readmeAssets/CRUD-react-add.png)
+
+## add update/delete endpoint
+
+![CRUD delete](readmeAssets/CRUD-delete.png)
+![CRUD update](readmeAssets/CRUD-update.png)
+![CRUD update success](readmeAssets/CRUD-update-logic.png)
